@@ -11,6 +11,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
  
 
-  
+  addTask() {
+    if (this.newTask.trim()) {
+      this.tasks.push({ name: this.newTask, completed: false });
+      this.newTask = '';
+    }
+  }
 
 }
