@@ -1,8 +1,8 @@
 <div class="todo-container">
   <h1>To-Do List</h1>
   <div class="input-container">
-    <input placeholder="Add a new task"  />
-    <button>Add</button>
+    <input [(ngModel)]="newTask" placeholder="Add a new task" />
+    <button (click)="addTask()">Add</button>
   </div>
 
   <ul>
