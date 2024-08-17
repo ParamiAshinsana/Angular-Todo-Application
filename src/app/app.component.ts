@@ -9,7 +9,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- 
+  newTask: string = '';
+  tasks: Task[] = [];
 
   addTask() {
     if (this.newTask.trim()) {
