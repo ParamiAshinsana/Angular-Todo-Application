@@ -7,7 +7,6 @@ interface Task {
   completed: boolean;
 }
 
-
 @Component({
   standalone: true,
   selector: 'app-root',
@@ -25,8 +24,9 @@ export class AppComponent {
       this.newTask = '';
     }
   }
+
   deleteTask(task: Task) {
     this.tasks = this.tasks.filter(t => t !== task);
   }
-
 }
+
