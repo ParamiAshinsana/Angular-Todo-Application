@@ -6,10 +6,12 @@
   </div>
 
   <ul>
-    <li>
-      <input type="checkbox"  />
-      
+    <li *ngFor="let task of tasks">
+      <input type="checkbox" [(ngModel)]="task.completed" />
+      <span [class.completed]="task.completed">{{ task.name }}</span>
+      <button class="delete-btn">Delete</button>
     </li>
   </ul>
+
 
 </div>
