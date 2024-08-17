@@ -25,5 +25,8 @@ export class AppComponent {
       this.newTask = '';
     }
   }
+  deleteTask(task: Task) {
+    
+  }
 
 }
