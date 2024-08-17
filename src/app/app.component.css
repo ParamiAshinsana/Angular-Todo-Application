@@ -11,3 +11,9 @@
     text-align: center;
     color: #3339;
   }
+
+  .input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
