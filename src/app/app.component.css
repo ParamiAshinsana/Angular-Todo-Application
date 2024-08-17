@@ -70,3 +70,44 @@
   .delete-btn:hover {
     background-color: #c82333;
   }
+
+
+  /* Style for the footer section */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Style for the footer text */
+  .footer-text p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  /* Style for the scroll-to-top icon */
+  .footer-iconTop {
+    margin-right: 20px;
+  }
+  
+  .footer-iconTop a {
+    color: #fff; /* White icon color */
+    text-decoration: none;
+    font-size: 24px; /* Icon size */
+  }
+  
+  /* Optional: Add hover effect for the icon */
+  .footer-iconTop a:hover {
+    color: #ff8b94; /* Color on hover */
+  }
+  .bx {
+    font-family: 'Boxicons', sans-serif; /* Ensure Boxicons is loaded */
+  }
