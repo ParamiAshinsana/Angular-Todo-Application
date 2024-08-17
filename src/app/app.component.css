@@ -2,22 +2,22 @@
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     border-radius: 8px;
   }
   
   h1 {
     text-align: center;
-    color: #3339;
+    color: #333;
   }
-
+  
   .input-container {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
   }
-
+  
   input[type="text"] {
     flex: 1;
     padding: 10px;
@@ -25,7 +25,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
   }
-
+  
   button {
     padding: 10px 15px;
     font-size: 16px;
@@ -36,10 +36,11 @@
     cursor: pointer;
     margin-left: 10px;
   }
+  
   button:hover {
     background-color: #0056b3;
   }
-
+  
   ul {
     list-style: none;
     padding: 0;
@@ -52,17 +53,20 @@
     padding: 10px 0;
     border-bottom: 1px solid #eee;
   }
-
+  
   li:last-child {
     border-bottom: none;
   }
+  
   .completed {
     text-decoration: line-through;
     color: #999;
   }
+  
   .delete-btn {
     background-color: #dc3545;
   }
+  
   .delete-btn:hover {
     background-color: #c82333;
   }
