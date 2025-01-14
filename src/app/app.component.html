@@ -1,4 +1,70 @@
-<link rel='stylesheet' href='https://unpkg.com/boxicons/css/boxicons.min.css'>
+<div class="row d-flex justify-content-center">
+  <div class="col-md-8">
+    <div class="card-hover-shadow-2x mb-3 card">
+      <div class="card-header-tab card-header">
+        <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
+          <i class="fa fa-tasks"></i>&nbsp;Task Lists
+        </div>
+      </div>
+      <div class="scroll-area-sm">
+        <div style="position: static;" class="ps ps--active-y">
+          <div class="ps-content">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item" *ngFor="let task of tasks">
+                <div [ngClass]="{'bg-warning': !task.completed, 'bg-focus': task.completed}">
+                  <div class="widget-content p-0">
+                    <div class="widget-content-wrapper">
+                      <div class="widget-content-left mr-2">
+                        <div class="custom-checkbox custom-control">
+                          <input class="custom-control-input" type="checkbox" [(ngModel)]="task.completed">
+                          <label class="custom-control-label">&nbsp;</label>
+                        </div>
+                      </div>
+                      <div class="widget-content-left flex2">
+                        <div class="widget-heading">{{ task.name }}</div>
+                        <div class="widget-subheading">By {{ task.name }}</div>
+                      </div>
+                      <div class="widget-content-right">
+                        <button class="border-0 btn-transition btn btn-outline-success" (click)="markAsDone(task)">
+                          <i class="fa fa-check"></i>
+                        </button>
+                        <button class="border-0 btn-transition btn btn-outline-danger" (click)="deleteTask(task)">
+                          <i class="fa fa-trash"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex text-right card-footer">
+        <div class="input-container">
+          <input [(ngModel)]="newTask" placeholder="Add a new task" (keyup.enter)="addTask()" />
+        </div>
+        <button class="btn btn-primary" (click)="addTask()">Add Task</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <link rel='stylesheet' href='https://unpkg.com/boxicons/css/boxicons.min.css'>
 
 <div class="todo-container">
   <h1>To-Do List</h1>
@@ -24,4 +90,4 @@
       <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
     </div>
   </section>
-</div>
+</div> -->

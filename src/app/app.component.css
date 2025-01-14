@@ -1,113 +1,168 @@
-.todo-container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    border-radius: 8px;
-  }
-  
-  h1 {
-    text-align: center;
-    color: #333;
-  }
-  
-  .input-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  input[type="text"] {
-    flex: 1;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button {
-    padding: 10px 15px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: 10px;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
-  }
-  
-  li:last-child {
-    border-bottom: none;
-  }
-  
-  .completed {
-    text-decoration: line-through;
-    color: #999;
-  }
-  
-  .delete-btn {
-    background-color: #dc3545;
-  }
-  
-  .delete-btn:hover {
-    background-color: #c82333;
-  }
 
 
-  /* Style for the footer section */
-.footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333; /* Dark background color */
-    color: #fff; /* White text color */
-    text-align: center;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* Style for the footer text */
-  .footer-text p {
-    margin: 0;
-    font-size: 14px;
-  }
-  
-  /* Style for the scroll-to-top icon */
-  .footer-iconTop {
-    margin-right: 20px;
-  }
-  
-  .footer-iconTop a {
-    color: #fff; /* White icon color */
-    text-decoration: none;
-    font-size: 24px; /* Icon size */
-  }
-  
-  /* Optional: Add hover effect for the icon */
-  .footer-iconTop a:hover {
-    color: #ff8b94; /* Color on hover */
-  }
-  .bx {
-    font-family: 'Boxicons', sans-serif; /* Ensure Boxicons is loaded */
-  }
+i {
+  font-style: italic;
+}
+
+
+
+.card {
+  box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03), 0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03), 0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05), 0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+  border-width: 0;
+  transition: all .2s;
+}
+
+.card-header:first-child {
+  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  border-bottom-width: 1px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0.625rem;
+  height: 3.5rem;
+  background-color: #fff;
+}
+.widget-subheading{
+  color: #858a8e;
+  font-size: 10px;
+}
+.card-header.card-header-tab .card-header-title {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.card-header .header-icon {
+  font-size: 1.65rem;
+  margin-right: 0.625rem;
+}
+
+.card-header.card-header-tab .card-header-title {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.btn-actions-pane-right {
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+.scroll-area-sm {
+  height: 288px;
+  overflow-x: hidden;
+}
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.list-group {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.todo-indicator {
+  position: absolute;
+  width: 4px;
+  height: 60%;
+  border-radius: 0.3rem;
+  left: 0.625rem;
+  top: 20%;
+  opacity: .6;
+  transition: opacity .2s;
+}
+
+.bg-warning {
+  background-color: #ffffff !important;
+}
+
+.widget-content {
+  padding: 1rem;
+  flex-direction: row;
+  align-items: center;
+}
+
+.widget-content .widget-content-wrapper {
+  display: flex;
+  flex: 1;
+  position: relative;
+  align-items: center;
+}
+
+.widget-content .widget-content-right.widget-content-actions {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.widget-content .widget-content-right {
+  margin-left: auto;
+}
+
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.btn {
+  position: relative;
+  transition: color 0.15s, background-color 0.15s, border-color 0.15s, box-shadow 0.15s;
+}
+
+.btn-outline-success {
+  color: #3ac47d;
+  border-color: #3ac47d;
+}
+
+.btn-outline-success:hover {
+  color: #fff;
+  background-color: #3ac47d;
+  border-color: #3ac47d;
+}
+
+.btn-outline-success:hover {
+  color: #fff;
+  background-color: #3ac47d;
+  border-color: #3ac47d;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #3f6ad8;
+  border-color: #3f6ad8;
+}
+.btn { 
+  position: relative;
+  transition: color 0.15s, background-color 0.15s, border-color 0.15s, box-shadow 0.15s;
+  outline: none !important;
+}
+
+.card-footer {
+  background-color: #fff;
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  padding: 1rem; /* Add padding for better spacing */
+}
+
+.input-container {
+  flex: 1; /* Allow the input container to take up available space */
+  margin-right: 10px; /* Add some space between input and button */
+}
+
+input {
+  width: 100%; /* Make the input field take up available space */
+}
